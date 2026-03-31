@@ -32,7 +32,7 @@ An advanced, interactive Business Intelligence (BI) engine designed to visualize
 
 ## 📸 Dashboard Interface
 <p align="center">
-  <img src="https://raw.githubusercontent.com/streamlit/docs/main/public/images/tutorials/create-a-data-explorer-app.png" width="800" alt="Dashboard Preview">
+  <img src="https://global-intelligence-economic-transformation-d5qpfkjpfnsgcrpc9d.streamlit.app/" width="800" alt="Dashboard Preview">
 </p>
 
 ---
