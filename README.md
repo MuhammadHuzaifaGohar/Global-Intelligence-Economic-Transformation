@@ -30,13 +30,6 @@ An advanced, interactive Business Intelligence (BI) engine designed to visualize
 
 ---
 
-## 📸 Dashboard Interface
-<p align="center">
-  <img src="https://global-intelligence-economic-transformation-d5qpfkjpfnsgcrpc9d.streamlit.app/" width="800" alt="Dashboard Preview">
-</p>
-
----
-
 ## 📂 Project Structure
 ```text
 ├── app.py              # Main Streamlit application
