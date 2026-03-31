@@ -4,7 +4,7 @@
 ![Plotly](https://img.shields.io/badge/Plotly-Latest-507282?logo=plotly)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-###  [View Live Dashboard Here]([PASTE_YOUR_STREAMLIT_LINK_HERE](https://global-intelligence-economic-transformation-d5qpfkjpfnsgcrpc9d.streamlit.app/)
+###  [View Live Dashboard Here](https://global-intelligence-economic-transformation-d5qpfkjpfnsgcrpc9d.streamlit.app/)
 
 An advanced, interactive Business Intelligence (BI) engine designed to visualize global transformation through the lens of wealth, health, and population dynamics. This project leverages real-world data from the **Gapminder Foundation** to provide executive-level insights into market scalability and economic longevity.
 
