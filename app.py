@@ -112,7 +112,6 @@ with head_col2:
     # Adding more graphic icons for a modern look
     st.markdown("""
         <div style="display: flex; gap: 20px; justify-content: flex-end; padding-top: 20px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965319.png" width="40">
             <img src="https://cdn-icons-png.flaticon.com/512/1041/1041888.png" width="40">
             <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" width="40">
         </div>
