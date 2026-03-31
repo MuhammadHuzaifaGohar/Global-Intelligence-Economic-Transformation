@@ -106,7 +106,7 @@ df_historic = df_raw[df_raw['continent'].isin(selected_continents)]
 # --- 5. TOP HEADING & GRAPHIC ICONS ---
 head_col1, head_col2 = st.columns([3, 1])
 with head_col1:
-    st.title("🌐 Global Intelligence Hub")
+    st.title("🌐 Global Intelligence & Economic Transformation")
     st.markdown(f"**Current View:** Year {selected_year} Market Insights")
 with head_col2:
     # Adding more graphic icons for a modern look
@@ -179,12 +179,38 @@ with row2_right:
     fig_heat.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
     st.plotly_chart(fig_heat, use_container_width=True)
 
-# --- 9. SUMMARY ---
+# --- 9. THE "SO WHAT?" SECTION (Automated Insights) ---
 st.markdown("---")
+st.subheader("🔬 Strategic Summary & Data Narrative")
+
+wealthiest_nation = df_filtered.loc[df_filtered['gdpPercap'].idxmax(), 'country']
+healthiest_nation = df_filtered.loc[df_filtered['lifeExp'].idxmax(), 'country']
+
 col_a, col_b = st.columns(2)
 with col_a:
-    st.success("**Strategic Insight:** Market volatility remains low in continents with high GDP per capita.")
-with col_b:
-    st.info("**Trend Alert:** Healthcare investment is positively correlated with emerging market growth.")
+    st.success(f"""
+    **Economic Performance Insights:**
+    * The nation of **{wealthiest_nation}** leads the selected regions in GDP per capita.
+    * There is a statistically significant correlation of **{corr_data.loc['lifeExp', 'gdpPercap']:.2f}** between wealth (GDP) and health (Life Expectancy).
+    * Higher population density in the **{selected_continents[0] if selected_continents else 'selected'}** region presents unique scalability opportunities for e-commerce.
+    """)
 
-st.markdown("<center><p style='color: #64748b;'>Portfolio Project | Designed by Mirza Arslan</p></center>", unsafe_allow_html=True)
+with col_b:
+    st.info(f"""
+    **Health & Longevity Observations:**
+    * **{healthiest_nation}** has reached a peak life expectancy in this dataset, indicating a mature social infrastructure.
+    * **Regional Note:** {len(selected_continents)} continents are being compared, showing a variance of 
+      ${(df_filtered['gdpPercap'].max() - df_filtered['gdpPercap'].min()):,.0f} in per-capita wealth.
+    """)
+
+# --- 10. TECHNICAL FOOTER ---
+st.markdown("---")
+with st.expander("🛠️ Technical Specifications & Data Engineering"):
+    st.write(f"""
+    - **Dataset Source:** Gapminder Foundation (Real-time CSV Fetch)
+    - **Engine:** Python 3.10+ / Pandas 2.0
+    - **Logic:** Custom Z-scaling for bubble sizing and Spline interpolation for line smoothing.
+    - **Last Pipeline Execution:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+    """)
+
+st.markdown("<center><p style='color: #64748b;'>Portfolio Project | Designed by Muhammad Huzaifa </p></center>", unsafe_allow_html=True)
